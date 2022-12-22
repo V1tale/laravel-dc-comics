@@ -4,7 +4,6 @@
     <section>
         <div class="container">
             <h1>Lista dei comics</h1>
-            <a href="{{ route('home') }}">Vai alla home</a>
             <table>
                 <thead>
                     <tr>
