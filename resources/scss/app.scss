@@ -1,1 +1,15 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+.container {
+    width:80%;
+    max-width: 1000px;
+    margin:auto;
+}
+.card {
+    height:100%;
+}
+h3 {
+    font-size: 1rem;
+}
+p {
+    font-size: .8rem;
+}
