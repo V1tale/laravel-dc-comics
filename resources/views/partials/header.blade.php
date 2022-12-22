@@ -13,6 +13,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('comics.index') }}">Indice</a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('comics.create') }}" class="nav-link">Aggiungi un Comics</a>
+            </li>
         </ul>
     </div>
 </nav>
