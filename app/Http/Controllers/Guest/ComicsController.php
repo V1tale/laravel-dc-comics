@@ -22,4 +22,17 @@ class ComicsController extends Controller
     {
         return view('comics.create');
     }
+    public function store(Request $request)
+    {
+        $addData = $request->all();
+        $newComic = new Comic();
+        $newComic->fill($addData);
+        $newComic->save();
+        return redirect()->route('comics.show', $newComic->id);
+    }
+    public function destroy(Comic $comic)
+    {
+        $comic->delete();
+        return redirect()->route('comics.index');
+    }
 }

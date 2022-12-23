@@ -4,17 +4,16 @@
     <section>
         <div class="container">
             <h2 class="text-center">Aggiungi un Comics</h2>
-            <form action="" method="">
+            <form action="{{ route('comics.store') }}" method="POST">
                 @csrf
-
                 <label for="title">Titolo</label>
                 <input type="text" class="form-control" id="title" name="title", placeholder="Aggiungi Titolo">
                 <label for="type">Tipologia</label>
                 <input type="text" class="form-control" id="type" name="type">
+                <label for="thumb">Cover</label>
+                <input type="text" class="form-control" id="thumb" name="thumb">
                 <label for="series">Aggiungi Serie</label>
                 <input type="text" class="form-control" id="series" name="series">
-                <label for="type">Tipologia</label>
-                <input type="text" class="form-control" id="type" name="type">
                 <label for="sale_date">Data d'uscita</label>
                 <input type="text" class="form-control" id="sale_date" name="sale_date">
                 <label for="price">Prezzo</label>
