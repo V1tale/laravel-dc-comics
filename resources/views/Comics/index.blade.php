@@ -4,7 +4,7 @@
     <section>
         <div class="container">
             <h1>Lista dei comics</h1>
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Titolo</th>
@@ -29,14 +29,19 @@
                             </td>
                             <td>
                                 <div class="button">
-                                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">O</a>
+                                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">Dettagli</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button">
+                                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Modifica</a>
                                 </div>
                             </td>
                             <td>
                                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">X</button>
+                                    <button type="submit" class="btn btn-danger">Cancella</button>
                                 </form>
                             </td>
                         </tr>
